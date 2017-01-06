@@ -12,16 +12,16 @@ All code is written in Python 3 and uses RL environments from [OpenAI Gym](https
 
 ### Table of Contents
 
-- [Introduction to RL problems & OpenAI Gym](Introduction/)
-- [MDPs and Bellman Equations](MDP/)
-- [Dynamic Programming: Model-Based RL, Policy Iteration and Value Iteration](DP/)
-- [Monte Carlo Model-Free Prediction & Control](MC/)
-- [Temporal Difference Model-Free Prediction & Control](TD/)
-- [Function Approximation](FA/)
-- [Deep Q Learning](DQN/) (WIP)
-- [Policy Gradient Methods](PolicyGradient/) (WIP)
-- Learning and Planning (WIP)
-- Exploration and Exploitation (WIP)
+1. [Introduction to RL problems & OpenAI Gym](Introduction/)
+1. [MDPs and Bellman Equations](MDP/)
+1. [Dynamic Programming: Model-Based RL, Policy Iteration and Value Iteration](DP/)
+1. [Monte Carlo Model-Free Prediction & Control](MC/)
+1. [Temporal Difference Model-Free Prediction & Control](TD/)
+1. [Function Approximation](FA/)
+1. [Deep Q Learning](DQN/) (WIP)
+1. [Policy Gradient Methods](PolicyGradient/) (WIP)
+1. Learning and Planning (WIP)
+1. Exploration and Exploitation (WIP)
 
 
 ### List of Implemented Algorithms
