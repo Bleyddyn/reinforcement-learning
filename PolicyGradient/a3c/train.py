@@ -36,6 +36,8 @@ FLAGS = tf.flags.FLAGS
 
 def make_env(wrap=True):
   env = gym.envs.make(FLAGS.env)
+  # remove the timelimitwrapper
+  env = env.env
   if wrap:
     env = atari_helpers.AtariEnvWrapper(env)
   return env
@@ -64,7 +66,7 @@ if FLAGS.reset:
 if not os.path.exists(CHECKPOINT_DIR):
   os.makedirs(CHECKPOINT_DIR)
 
-summary_writer = tf.train.SummaryWriter(os.path.join(MODEL_DIR, "train"))
+summary_writer = tf.summary.FileWriter(os.path.join(MODEL_DIR, "train"))
 
 with tf.device("/cpu:0"):
 
@@ -111,7 +113,7 @@ with tf.device("/cpu:0"):
     saver=saver)
 
 with tf.Session() as sess:
-  sess.run(tf.initialize_all_variables())
+  sess.run(tf.global_variables_initializer())
   coord = tf.train.Coordinator()
 
   # Load a previous checkpoint if it exists
